@@ -25,7 +25,7 @@ const CronJob = require("cron").CronJob;
 
 
 /** Send email */
-/** new CronJob(
+new CronJob(
   "50 7 * * *",
   function () {
     emailService.send_Mail(
@@ -37,4 +37,4 @@ const CronJob = require("cron").CronJob;
   null,
   false,
   "Asia/Kolkata"
-).start(); */
+).start();

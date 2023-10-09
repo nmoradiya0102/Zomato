@@ -11,11 +11,11 @@ const citySchema = new mongoose.Schema(
             type : Number,
             default : 0
         },
-        state: {
+        State: {
             type : mongoose.Types.ObjectId,
             ref : "State"
         },
-        country: {
+        Country: {
             type : mongoose.Types.ObjectId,
             ref : "Country"
         }
@@ -26,5 +26,5 @@ const citySchema = new mongoose.Schema(
     }
 )
 
-const city = mongoose.model("City" , citySchema);
-module.exports = city;
+const City = mongoose.model("City" , citySchema);
+module.exports = City;

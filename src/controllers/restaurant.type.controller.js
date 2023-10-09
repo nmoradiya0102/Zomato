@@ -4,10 +4,10 @@ const { restaurantTypeService } = require("../services");
 const createRestaurantType = async(req,res) => {
     try {
         const reqbody = req.body;
-        const restaurantTypeExist = await restaurantTypeService.getRestaurantTypeByName(reqbody.restaurant_type);
-        if(restaurantTypeExist){
-            throw new Error("this type of restaurant already created..!");
-        }
+        // const restaurantTypeExist = await restaurantTypeService.getRestaurantTypeByName(reqbody.restaurant_type);
+        // if(restaurantTypeExist){
+        //     throw new Error("this type of restaurant already created..!");
+        // }
         const restaurantType = await restaurantTypeService.createRestaurantType(reqbody);
         if(!restaurantType){
             throw new Error("Something went wrong..! ");

@@ -7,7 +7,7 @@ const stateSchema = new mongoose.Schema(
             type:String,
             trim:true
         },
-        country: {
+        Country: {
             type:mongoose.Types.ObjectId,
             ref:"Country"
         }

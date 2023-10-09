@@ -12,7 +12,7 @@ const getCityByName = async(city_name) => {
 
 // get city list
 const getCityList = async() => {
-    return City.find().populate("state").populate("country");
+    return City.find().populate("State").populate("Country");
 }
 
 // get city by Id

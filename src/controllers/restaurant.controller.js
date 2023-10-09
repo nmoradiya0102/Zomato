@@ -10,10 +10,11 @@ const createRestaurant = async(req,res) => {
         // const reqbody = req.body;
         // reqbody.restaurant_image = req.files[0].filename
         // reqbody.food_image = req.files[1].filename
-        const restaurantExist = await restaurantService.getRestaurantByName(reqbody.restaurant_name);
-        if(restaurantExist){
-            throw new Error("This Name Restaurant already created..!");
-        }
+        // const restaurantExist = await restaurantService.getRestaurantByName(reqbody.restaurant_name);
+        // if(restaurantExist){
+        //     throw new Error("This Name Restaurant already created..!");
+        // }
+        const reqbody = req.body;
         const restaurant = await restaurantService.createRestaurant(reqbody);
         if(!restaurant){
             throw new Error("Something went wrong..! ");

@@ -3,3 +3,4 @@ module.exports.stateController = require("./state.controller");
 module.exports.countryController = require("./country.controller");
 module.exports.restaurantController = require("./restaurant.controller");
 module.exports.restaurantTypeController = require("./restaurant.type.controller");
+module.exports.userController = require("./user.controller");

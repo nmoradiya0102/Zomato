@@ -9,7 +9,7 @@ const createState = async(reqbody) => {
 }
 
 const getStateList = async() => {
-    return State.find().populate("country");
+    return State.find().populate("Country");
 }
 
 const getStateById = async(stateId) => {
