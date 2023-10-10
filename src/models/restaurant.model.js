@@ -35,11 +35,11 @@ const restaurantSchema = mongoose.Schema(
             type : String,
             trim : true
         },
-        restaurant_type : {
+        RestaurantType : {
             type : mongoose.Types.ObjectId,
-            ref : "Restaurant_type"
+            ref : "RestaurantType"
         },
-        city : {
+        City : {
             type : mongoose.Types.ObjectId,
             ref : "City"
         },

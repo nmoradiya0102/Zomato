@@ -10,8 +10,8 @@ const createRestaurant = {
         owner_email : Joi.string().required().trim(),
         owner_contact_no : Joi.number().integer().required(),
         restaurant_image : Joi.optional(),
-        restaurant_type : Joi.string().required().trim(),
-        city : Joi.string().required().trim(),
+        RestaurantType : Joi.string().required().trim(),
+        City : Joi.string().required().trim(),
     })
 }
 

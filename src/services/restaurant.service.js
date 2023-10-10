@@ -12,7 +12,7 @@ const getRestaurantByName = async(restaurant_name) => {
 
 // Get Restaurant list
 const getRestaurantList = async() => {
-    return Restaurant.find().populate("restaurant_type").populate("city");
+    return Restaurant.find().populate("RestaurantType").populate("City");
 }
 
 // Get Restaurant by Id
