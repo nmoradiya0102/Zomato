@@ -4,27 +4,27 @@ const { countryValidation } = require("../validations");
 const { countryController } = require("../controllers");
 const router = express.Router()
 
-// create country
+ /* ----------------------------- create country ----------------------------- */
 router.post(
     "/create-country",
     validate(countryValidation.createCountry),
     countryController.createCountry
 )
 
-// country list
+/* ------------------------------ country list ------------------------------ */
 router.get(
     "/list",
     countryController.getCountryList
 )
 
-// update country
+/* ----------------------------- update country ----------------------------- */
 router.put(
     "/update-country/:countryId",
     validate(countryValidation.createCountry),
     countryController.updateCountry
 )
 
-// delete country
+ /* ----------------------------- delete country ----------------------------- */
 router.delete(
     "/delete-country/:countryId",
     countryController.deleteCountry

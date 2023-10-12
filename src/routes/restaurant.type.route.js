@@ -4,25 +4,27 @@ const { restaurantTypeValidation } = require("../validations");
 const { restaurantTypeController } = require("../controllers");
 const router = express.Router()
 
-// Create restaurant type
+ /* ------------------------- Create restaurant type ------------------------- */
 router.post(
     "/create-restaurant-type",
     validate(restaurantTypeValidation.createRestaurantType),
     restaurantTypeController.createRestaurantType
 )
-// Update restaurant type with id
+
+/* --------------------- Update restaurant type with id --------------------- */
 router.put(
     "/update-restaurant-type/:restaurant_typeId",
     validate(restaurantTypeValidation.createRestaurantType),
     restaurantTypeController.updateRestaurantType
 )
-// Delete restaurant type by id
+
+/* ---------------------- Delete restaurant type by id ---------------------- */
 router.delete(
     "/delete-restaurant-type/:restaurant_typeId",
     restaurantTypeController.deleteRestaurantType
 )
 
-//  get list
+/* -------------------------------- get list -------------------------------- */
 router.get(
     "/list",
     restaurantTypeController.getRestaurantTypeList

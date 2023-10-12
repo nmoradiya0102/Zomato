@@ -4,3 +4,7 @@ module.exports.countryController = require("./country.controller");
 module.exports.restaurantController = require("./restaurant.controller");
 module.exports.restaurantTypeController = require("./restaurant.type.controller");
 module.exports.userController = require("./user.controller");
+module.exports.orderController = require("./order.controller");
+module.exports.cartController = require("./cart.controller");
+module.exports.foodController = require("./food.controller");
+module.exports.tokenController = require("./token.controller");

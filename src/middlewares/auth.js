@@ -1,11 +1,10 @@
 const jwt = require("jsonwebtoken");
 const { User } = require("../models");
-const config = require("../config/config");
+const config = require("../config/config")
 
 const auth = () => async (req, res, next) => {
   try {
     const token = req.headers.authorization;
-    console.log("Token is => " + token);
     if (!token) {
       return next(res.status(401).json({
         status: 401,

@@ -4,27 +4,27 @@ const { stateValidation } = require("../validations");
 const { stateController } = require("../controllers");
 const router = express.Router()
 
-// create state
+/* ------------------------------ create state ------------------------------ */
 router.post(
     "/create-state",
     validate(stateValidation.createState),
     stateController.createState
 )
 
-// state list
+/* ------------------------------- state list ------------------------------- */
 router.get(
     "/list",
     stateController.getStateList
 )
 
-// update state
+/* ------------------------------ update state ------------------------------ */
 router.put(
     "/update-state/:stateId",
     validate(stateValidation.createState),
     stateController.updateState
 )
 
-// delete state
+/* ------------------------------ delete state ------------------------------ */
 router.delete(
     "/delete-state/:stateId",
     stateController.deleteState

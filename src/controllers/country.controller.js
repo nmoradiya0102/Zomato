@@ -1,6 +1,6 @@
 const { countryService } = require("../services");
 
-//  Create Country
+ /* ----------------------------- Create Country ----------------------------- */
 const createCountry = async(req,res) => {
     try {
         const reqbody = req.body;
@@ -26,7 +26,7 @@ const createCountry = async(req,res) => {
 }
 
 
-// Get Country List
+ /* ---------------------------- Get Country List ---------------------------- */
 const getCountryList = async(req,res) => {
     try {
         const countryList = await countryService.getCountryList();
@@ -46,7 +46,7 @@ const getCountryList = async(req,res) => {
       }
 }
 
-// Update Country
+/* ----------------------------- Update Country ----------------------------- */
 const updateCountry = async(req,res) => {
     try {
         const countryId = req.params.countryId;
@@ -72,7 +72,7 @@ const updateCountry = async(req,res) => {
     }
 }
 
-// Delete country
+ /* ----------------------------- Delete country ----------------------------- */
 const deleteCountry = async(req,res) => {
     try {
         const countryId = req.params.countryId;

@@ -28,7 +28,7 @@ const CronJob = require("cron").CronJob;
 new CronJob(
   "50 7 * * *",
   function () {
-    emailService.send_Mail(
+    emailService.sendMail(
       "nmoradiya07@gmail.com",
       "Morning message",
       "Good morning Mily! Have a nice day ;)"

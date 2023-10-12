@@ -5,3 +5,7 @@ module.exports.restaurantService = require("./restaurant.service");
 module.exports.restaurantTypeService = require("./restaurant.type.services");
 module.exports.emailService = require("./email.services");
 module.exports.userService = require("./user.services");
+module.exports.orderService = require("./order.services");
+module.exports.cartService = require("./cart.services");
+module.exports.foodservice = require("./food.services");
+module.exports.tokenService = require("./token.services");

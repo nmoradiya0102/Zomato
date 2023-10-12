@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-//  Create restaurant
+ /* ---------------------------- Create restaurant --------------------------- */
 const createRestaurant = {
     body: Joi.object().keys({
         restaurant_name : Joi.string().required().trim(),
@@ -10,8 +10,8 @@ const createRestaurant = {
         owner_email : Joi.string().required().trim(),
         owner_contact_no : Joi.number().integer().required(),
         restaurant_image : Joi.optional(),
-        RestaurantType : Joi.string().required().trim(),
-        City : Joi.string().required().trim(),
+        RestaurantType : Joi.string().trim(),
+        City : Joi.string().trim(),
     })
 }
 

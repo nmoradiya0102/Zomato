@@ -1,6 +1,6 @@
 const { stateService } = require("../services");
 
-// Create State
+/* ------------------------------ Create State ------------------------------ */
 const createState = async(req , res) => {
     try{
         const reqbody = req.body;
@@ -25,7 +25,7 @@ const createState = async(req , res) => {
     }
 };
 
-// Get State List
+ /* ----------------------------- Get State List ----------------------------- */
 const getStateList = async(req , res) => {
     try{
         const stateList = await stateService.getStateList();
@@ -45,7 +45,7 @@ const getStateList = async(req , res) => {
     }
 };
 
-// update State
+/* ------------------------------ update State ------------------------------ */
 const updateState = async(req , res) =>{
     try{
         const stateId = req.params.stateId;
@@ -71,7 +71,7 @@ const updateState = async(req , res) =>{
     }
 };
 
-// delete state
+/* ------------------------------ delete state ------------------------------ */
 const deleteState = async(req , res) => {
     try{
         const stateId = req.params.stateId;

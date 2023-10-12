@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-//  Create city
+ /* ------------------------------- Create city ------------------------------ */
 const createCity = {
     body : Joi.object().keys({
         city_name : Joi.string().required().trim(),

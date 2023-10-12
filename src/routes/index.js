@@ -5,6 +5,10 @@ const countryRoute = require("./country.route");
 const restaurantRoute = require("./restaurant.route");
 const restaurantTypeRoute = require("./restaurant.type.route");
 const userRoute = require("./user.route");
+const orderRoute = require("./order.route");
+const cartRoute = require("./cart.route");
+const foodRoute = require("./food.route");
+const tokenRoute = require("./token.route");
 
 const router = express.Router()
 
@@ -14,5 +18,8 @@ router.use("/country" , countryRoute);
 router.use("/restaurant" , restaurantRoute);
 router.use("/restaurant-type" , restaurantTypeRoute);
 router.use("/user" , userRoute);
-
+router.use("/order" , orderRoute);
+router.use("/cart" , cartRoute);
+router.use("/food" , foodRoute);
+router.use("/token" , tokenRoute);
 module.exports = router;
