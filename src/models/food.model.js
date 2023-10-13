@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-/* ------------------------------- food schema ------------------------------ */
+/*food schema  */
 const foodSchema = new mongoose.Schema(
     {
         food_name:{
@@ -18,7 +18,11 @@ const foodSchema = new mongoose.Schema(
         restaurant:{
             type : mongoose.Types.ObjectId,
             ref : "Restaurant"
-        }
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps : true,

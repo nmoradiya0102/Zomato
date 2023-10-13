@@ -1,16 +1,16 @@
 const { Food } = require("../models");
 
-/* ------------------------------- Create food ------------------------------ */
+/* Create food  */
 const createFood = async(reqbody) => {
     return Food.create(reqbody);
 }
 
- /* ---------------------------- Get food by name ---------------------------- */
+ /*Get food by name*/
 const getFoodByName = async(food_name) => {
     return Food.findOne({food_name})
 }
 
-/* ------------------------------ Get food list ----------------------------- */
+/* Get food list */
 const getFoodList = async() => {
     return Food.find().populate({
         path:"restaurant",
@@ -18,17 +18,17 @@ const getFoodList = async() => {
     });
 }
 
-/* ----------------------------- Get food by id ----------------------------- */
+/* Get food by id */
 const getFoodById = async(foodId) => {
     return Food.findById(foodId);
 }
 
-/* ---------------------------- Update food by id --------------------------- */
+/*Update food by id  */
 const updateFood = async(foodId,reqbody) => {
     return Food.findByIdAndUpdate(foodId,{$set:reqbody});
 }
 
-/* ------------------------------- Delete food ------------------------------ */
+/* - Delete food  */
 const deleteFood = async(foodId) => {
     return Food.findByIdAndDelete(foodId);
 }

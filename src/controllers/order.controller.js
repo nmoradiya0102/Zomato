@@ -3,10 +3,11 @@ const { orderService } = require("../services");
 /* ------------------------------ Create order ------------------------------ */
 const createOrder = async (req, res) => {
   try {
-    const orderExist = await orderService.getOrderByUser(reqbody.user);
-    if (orderExist) {
-      throw new Error("Order already create by this user..!");
-    }
+    const reqbody = req.body;
+    // const orderExist = await orderService.getOrderByUser(reqbody.user);
+    // if (orderExist) {
+    //   throw new Error("Order already create by this user..!");
+    // }
     const order = await orderService.createOrder(reqbody);
     if (!order) {
       throw new Error("Something went wrong..!");

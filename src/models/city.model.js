@@ -18,7 +18,11 @@ const citySchema = new mongoose.Schema(
         Country: {
             type : mongoose.Types.ObjectId,
             ref : "Country"
-        }
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps : true,

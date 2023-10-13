@@ -14,7 +14,11 @@ const restaurantTypeSchema = mongoose.Schema(
         cuisine_type : {
             type : String,
             trim : true
-        }
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps : true,

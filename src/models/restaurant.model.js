@@ -46,7 +46,11 @@ const restaurantSchema = mongoose.Schema(
         restaurant_status : {
             type : Boolean,
             default : true
-        }
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps : true,

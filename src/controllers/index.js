@@ -8,3 +8,6 @@ module.exports.orderController = require("./order.controller");
 module.exports.cartController = require("./cart.controller");
 module.exports.foodController = require("./food.controller");
 module.exports.tokenController = require("./token.controller");
+module.exports.bannerController = require("./banner.controller");
+module.exports.adminController = require("./admin.controller");
+module.exports.favoriteController = require("./favorite.controller");

@@ -3,6 +3,7 @@ const { foodService } = require("../services");
  /* ------------------------------- Create food ------------------------------ */
 const createFood = async(req,res) => {
     try {
+        const reqbody = req.body;
         const food = await foodService.createFood(reqbody);
         if(!food){
             throw new Error("Something went wrong..!");

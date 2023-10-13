@@ -12,7 +12,7 @@ const createCart = async(req,res) => {
         if(cartExist){
             throw new Error("Cart already Exist for this uset..!");
         }
-        const cart = await cartService.creatCart(reqbody);
+        const cart = await cartService.createCart(reqbody);
         if(!cart){
             throw new Error("Something went wront..!");
         }

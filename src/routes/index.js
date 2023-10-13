@@ -9,6 +9,9 @@ const orderRoute = require("./order.route");
 const cartRoute = require("./cart.route");
 const foodRoute = require("./food.route");
 const tokenRoute = require("./token.route");
+const bannerRoute = require("./banner.route");
+const adminRoute = require("./admin.route");
+const favoriteRoute = require("./favorite.route");
 
 const router = express.Router()
 
@@ -22,4 +25,7 @@ router.use("/order" , orderRoute);
 router.use("/cart" , cartRoute);
 router.use("/food" , foodRoute);
 router.use("/token" , tokenRoute);
+router.use("/banner" , bannerRoute);
+router.use("/admin" , adminRoute);
+router.use("/favorite" , favoriteRoute);
 module.exports = router;

@@ -8,3 +8,6 @@ module.exports.Order = require("./order.model");
 module.exports.Cart = require("./cart.model");
 module.exports.Food = require("./food.model");
 module.exports.Token = require("./token.model");
+module.exports.Banner = require("./banner.model");
+module.exports.Admin = require("./admin.model");
+module.exports.Favorite = require("./favorite.model");
