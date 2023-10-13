@@ -54,9 +54,16 @@ const restaurantSchema = mongoose.Schema(
     },
     {
         timestamps : true,
-        versionKey : false
+        versionKey : false,
+        toJSON: {
+            transform: function (doc, data) {
+              if (data?.restorant_image) {
+                data.restorant_image = `${config.base_url}restaurant_image/${data.restorant_image}`;
+              };
+            }
+        }
     }
-)
+);
 
 const restaurant = mongoose.model("Restaurant" , restaurantSchema);
 module.exports = restaurant;

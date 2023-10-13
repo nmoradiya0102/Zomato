@@ -11,7 +11,7 @@ const validate = (schema) => (req, res, next) => {
   if (error) {
     const errorMessage = error.details
       .map((details) => details.message)
-      .join(", ");
+      .join(",");
     return next(new Error(errorMessage));
   }
   Object.assign(req, value);

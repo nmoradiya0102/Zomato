@@ -11,3 +11,5 @@ module.exports.tokenValidation = require("./token.validation");
 module.exports.bannerValidation = require("./banner.validation");
 module.exports.adminValidation = require("./admin.validation");
 module.exports.favoriteValidation = require("./favorite.validation");
+module.exports.menuValidation = require("./menu.validation");
+module.exports.reviewValidation = require("./review.validation");

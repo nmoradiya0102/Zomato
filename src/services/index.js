@@ -12,3 +12,5 @@ module.exports.tokenService = require("./token.services");
 module.exports.bannerService = require("./banner.service");
 module.exports.adminService = require("./admin.service");
 module.exports.favoriteService = require("./favorite.service");
+module.exports.menuService = require("./menu.service");
+module.exports.reviewService = require("./review.service");

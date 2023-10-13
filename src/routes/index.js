@@ -12,6 +12,8 @@ const tokenRoute = require("./token.route");
 const bannerRoute = require("./banner.route");
 const adminRoute = require("./admin.route");
 const favoriteRoute = require("./favorite.route");
+const menuRoute = require("./menu.route");
+const reviewRoute = require("./review.route");
 
 const router = express.Router()
 
@@ -28,4 +30,7 @@ router.use("/token" , tokenRoute);
 router.use("/banner" , bannerRoute);
 router.use("/admin" , adminRoute);
 router.use("/favorite" , favoriteRoute);
+router.use("/menu" , menuRoute);
+router.use("/review" , reviewRoute);
+
 module.exports = router;
