@@ -1,6 +1,6 @@
 const { cartService,userService } = require("../services");
 
-/* ------------------------------- create cart ------------------------------ */ 
+/*  create cart*/
 const createCart = async(req,res) => {
     try {
         const reqbody = req.body;
@@ -10,7 +10,7 @@ const createCart = async(req,res) => {
         }
         const cartExist = await cartService.getCartByUser(reqbody.user);
         if(cartExist){
-            throw new Error("Cart already Exist for this uset..!");
+            throw new Error("Cart already Exist for this user..!");
         }
         const cart = await cartService.createCart(reqbody);
         if(!cart){
@@ -29,7 +29,7 @@ const createCart = async(req,res) => {
     }
 }
 
-/* ------------------------------ get cart list ----------------------------- */
+/*get cart list*/
 const getCartList = async(req,res) => {
     try {
         const cartlist = await cartService.getCartList();
@@ -49,7 +49,7 @@ const getCartList = async(req,res) => {
     }
 }
 
-/* ------------------------------- delete cart ------------------------------ */
+/*  delete cart*/
 const deleteCart = async(req,res) => {
     try {
         const cartExist = await cartService.getCartById(req.params.cartId)
@@ -72,7 +72,7 @@ const deleteCart = async(req,res) => {
     }
 }
 
-/* ------------------------------- update cart ------------------------------ */
+/*  update cart*/
 const updateCart = async(req,res) => {
     try {
         const cartExist = await cartService.getCartById(req.params.cartId);

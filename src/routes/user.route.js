@@ -6,7 +6,7 @@ const auth = require("../middlewares/auth")
 
 const router = express.Router();
 
- /* ------------------------------- create user ------------------------------ */
+/*  create user */
 router.post(
     "/create-user",
     // auth(),
@@ -14,26 +14,26 @@ router.post(
     userController.createUser
 );
 
- /* ------------------------------ Get user list ----------------------------- */
+/* Get user list */
 router.get(
     "/list",
     userController.getUserList
 );
 
-/* ------------------------------- delete user ------------------------------ */
+/* delete user */
 router.delete(
     "/delete-user/:userId",
     userController.deleteUser
 );
 
-/* ------------------------------- update user ------------------------------ */
+/* update user */
 router.put(
     "/update-user/:userId",
     validate(userValidation.createUser),
     userController.updateUser
 )
 
-/* -------------------------------- mail send ------------------------------- */
+/* mail send  */
 router.post(
     "/send-mail",
     validate(userValidation.sendMail),

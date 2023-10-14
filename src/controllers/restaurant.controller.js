@@ -1,7 +1,7 @@
 const { Error } = require("mongoose");
 const { restaurantService } = require("../services");
 
- /* - Create restaurant  */
+ /*  Create restaurant */
 const createRestaurant = async(req,res) => {
     try {
         const reqBody = req.body;
@@ -47,7 +47,7 @@ const getRestaurantList = async(req,res) => {
       }
 }
 
-/* - Update restaurant  */
+/*  Update restaurant  */
 const updateRestaurant = async(req,res) => {
     try {
         const restaurantId = req.params.restaurantId;
@@ -97,7 +97,7 @@ const updateStatus = async(req,res) => {
     }
 }
 
- /* - Delete restaurant  */
+ /*  Delete restaurant  */
 const deleteRestaurant = async(req,res) => {
     try {
         const restaurantId = req.params.restaurantId;

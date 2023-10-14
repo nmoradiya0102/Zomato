@@ -14,3 +14,4 @@ module.exports.adminService = require("./admin.service");
 module.exports.favoriteService = require("./favorite.service");
 module.exports.menuService = require("./menu.service");
 module.exports.reviewService = require("./review.service");
+module.exports.ownerService = require("./owner.service");

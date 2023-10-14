@@ -1,6 +1,6 @@
 const joi = require("joi");
 
-//create Menu
+/* create Menu */
 const createMenu = {
     body:joi.object({
         menu_name : joi.string().min(3).max(20).required(),

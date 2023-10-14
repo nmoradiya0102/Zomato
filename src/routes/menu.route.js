@@ -1,11 +1,11 @@
 const express = require("express");
 const validate = require("../middlewares/validate");
-const {upload} = require("../middlewares/upload");
+const { upload } = require("../middlewares/upload");
 const { menuController } = require("../controllers");
 const { menuValidation } = require("../validations");
 const router = express.Router();
 
-//create Menu
+/* create Menu */
 router.post(
     "/create-menu",
     upload.single("menu_image"),
@@ -13,19 +13,19 @@ router.post(
     menuController.createMenu
 );
 
-//Menu list
+/* Menu list */
 router.get(
     "/menu-list",
     menuController.getMenuList
 );
 
-//delete Menu
+/* delete Menu */
 router.delete(
     "/delete-menu/:menuId",
     menuController.deleteMenu
 );
 
-//update Menu
+/* update Menu */
 router.put(
     "/update-menu/:menuId",
     menuController.updateMenu

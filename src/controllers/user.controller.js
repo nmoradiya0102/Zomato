@@ -1,6 +1,6 @@
 const { userService , emailService } = require("../services");
 
-/* ------------------------------- Create user ------------------------------ */
+/*  Create user */
 const createUser = async (req, res) => {
   try {
     const reqBody = req.body;
@@ -22,7 +22,7 @@ const createUser = async (req, res) => {
   }
 };
 
-/* -------------------------------- user list ------------------------------- */
+/* user list  */
 const getUserList = async (req, res) => {
   try {
     const userlist = await userService.getUserList();
@@ -39,7 +39,7 @@ const getUserList = async (req, res) => {
   }
 };
 
-/* ----------------------------- Get user by id ----------------------------- */
+/* Get user by id */
 const getUserDetails = async (req, res) => {
   try {
     const getDetails = await userService.getUserById(req.params.userId);
@@ -57,7 +57,7 @@ const getUserDetails = async (req, res) => {
   }
 };
 
- /* ------------------------ user details update by id ----------------------- */
+ /* user details update by id */
 const updateDetails = async (req, res) => {
   try {
     const userId = req.params.userId;
@@ -77,7 +77,7 @@ const updateDetails = async (req, res) => {
   }
 };
 
- /* ------------------------------- update user ------------------------------ */
+ /* update user */
 const updateUser = async (req, res) => {
   try {
     const reqbody = req.body
@@ -99,7 +99,7 @@ const updateUser = async (req, res) => {
   }
 };
 
- /* ------------------------------- delete user ------------------------------ */
+ /* delete user */
 const deleteUser = async (req, res) => {
   try {
     const userId = req.params.userId;
@@ -121,7 +121,7 @@ const deleteUser = async (req, res) => {
 };
 
 
-// Send mail to reqested email
+/* Send mail to reqested email */
 const sendMail = async (req, res) => {
     try {
       const reqBody = req.body;
@@ -140,7 +140,6 @@ const sendMail = async (req, res) => {
       res.status(400).json({ success: false, message: error.message });
     }
   };
-
 
 
 module.exports = {

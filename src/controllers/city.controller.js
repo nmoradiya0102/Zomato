@@ -1,6 +1,6 @@
 const { cityService } = require("../services");
 
-/* ------------------------------- Create City ------------------------------ */
+/* Create City*/
 const createCity = async(req , res) => {
     try {
         const reqbody = req.body;
@@ -26,7 +26,7 @@ const createCity = async(req , res) => {
     }
 };
 
-/* ---------------------------- Get City List ---------------------------- */
+/*  Get City List */
 const getCityList = async(req , res) => {
     try{
         const cityList = await cityService.getCityList();
@@ -46,7 +46,7 @@ const getCityList = async(req , res) => {
     }
 }
 
- /* ------------------------------- Update City ------------------------------ */
+ /* Update City*/
 const updateCity = async(req , res) => {
     try {
         const cityId = req.params.cityId;
@@ -68,7 +68,7 @@ const updateCity = async(req , res) => {
     }
 }
 
-/* ------------------------------- delete City ------------------------------ */
+/* delete City*/
 const deleteCity = async(req , res) =>{
     try {
         const cityId = req.params.cityId;

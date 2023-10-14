@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/* ------------------------------- City schema ------------------------------ */
+/* City schema */
 const citySchema = new mongoose.Schema(
     {
         city_name: {

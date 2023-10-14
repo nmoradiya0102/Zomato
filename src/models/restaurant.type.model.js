@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/* ------------------------- restaurant Type schema ------------------------- */
+/* restaurant Type schema */
 const restaurantTypeSchema = mongoose.Schema(
     {
         restaurant_type : {

@@ -13,3 +13,4 @@ module.exports.Admin = require("./admin.model");
 module.exports.Favorite = require("./favorite.model");
 module.exports.Menu = require("./menu.model");
 module.exports.Review = require("./review.model");
+module.exports.Owner = require("./owner.model");

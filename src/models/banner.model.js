@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//  banner schema
 const bannerSchema = mongoose.Schema(
   {
     banner_name: {
@@ -26,6 +27,13 @@ const bannerSchema = mongoose.Schema(
   {
     timestamps: true,
     versionKey: false,
+    toJSON :{
+      transform : function(doc ,data){
+         if(data?.banner_image){
+             data.banner_image =`${config.base_url}Banner_Images/${data.banner_image}`;
+         }
+        }
+      }
   }
 );
 

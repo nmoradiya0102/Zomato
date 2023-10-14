@@ -1,6 +1,6 @@
 const { restaurantTypeService } = require("../services");
 
- /* ------------------------- Create restaurant type ------------------------- */
+ /* Create restaurant type */
 const createRestaurantType = async(req,res) => {
     try {
         const reqbody = req.body;
@@ -25,7 +25,7 @@ const createRestaurantType = async(req,res) => {
     }
 }
 
-/* ------------------------ Get restaurant type list ------------------------ */
+/*  Get restaurant type list  */
 const getRestaurantTypeList = async(req,res) => {
     try {
         const restaurantTypeList = await restaurantTypeService.getRestaurantTypeList();
@@ -45,7 +45,7 @@ const getRestaurantTypeList = async(req,res) => {
       }
 }
 
- /* ------------------------- Update restaurant type ------------------------- */
+ /* Update restaurant type */
 const updateRestaurantType = async(req,res) => {
     try {
         const restaurantTypeId = req.params.restaurantTypeId;
@@ -71,7 +71,7 @@ const updateRestaurantType = async(req,res) => {
     }
 }
 
- /* ------------------------- Delete restaurant type ------------------------- */
+ /* Delete restaurant type */
 const deleteRestaurantType = async(req,res) => {
     try {
         const restaurantTypeId = req.params.restaurantTypeId;

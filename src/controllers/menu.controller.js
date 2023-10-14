@@ -1,6 +1,6 @@
 const { menuService } = require("../services");
 
-//create Menu
+/*create Menu */
 const createMenu = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -26,7 +26,7 @@ const createMenu = async (req, res) => {
     };
 };
 
-//Menu List
+/* Menu List */
 const getMenuList = async (req, res) => {
     try {
         const List = await menuService.getMenuList(req, res);
@@ -43,7 +43,7 @@ const getMenuList = async (req, res) => {
     };
 };
 
-//delete Menu
+/* delete Menu */
 const deleteMenu = async (req, res) => {
     try {
         const menuId = req.params.menuId;
@@ -61,7 +61,7 @@ const deleteMenu = async (req, res) => {
     };
 };
 
-//update Menu
+/* update Menu */
 const updateMenu = async (req, res) => {
     try {
         const menuId = req.params.menuId;

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/* ------------------------------- cart schema ------------------------------ */
+/* cart schema */
 const cartSchema = new mongoose.Schema(
     {
       item_name: {
@@ -40,7 +40,7 @@ const cartSchema = new mongoose.Schema(
       timestamps: true,
       versionKey: false,
     }
-);  
+);
 
 const Cart = mongoose.model("Cart", cartSchema);
 module.exports = Cart;

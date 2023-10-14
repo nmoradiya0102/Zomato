@@ -1,15 +1,15 @@
 const express = require("express");
 const validate = require("../middlewares/validate");
 const { reviewController } = require("../controllers");
-const { reviewValidation } = require("../validations")
+const { reviewValidation } = require("../validations");
 
 const router = express.Router();
 
 /**create review */
 router.post(
-    "/createReview",
-    validate(reviewValidation.createReview),
-    reviewController.createReview
+  "/createReview",
+  validate(reviewValidation.createReview),
+  reviewController.createReview
 );
 
 /**get review list */
@@ -34,6 +34,6 @@ router.put(
 router.delete(
     "/deleteReview/:reviewId",
     reviewController.deleteReview
-)
+);
 
 module.exports = router;

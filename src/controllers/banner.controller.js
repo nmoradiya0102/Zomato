@@ -1,4 +1,3 @@
-const fs = require("fs");
 const { bannerService } = require("../services");
 
 /** Create Banner */
@@ -7,23 +6,23 @@ const createBanner = async (req, res) => {
     const reqbody = req.body;
 
     if (req.file) {
-      reqbody.product_image = req.file.filename;
+      reqbody.banner_image = req.file.filename;
     } else {
-      throw new Error("Banner image is required -!- ");
+      throw new Error("Banner image is required..! ");
     }
 
     const banner = await bannerService.createBanner(reqbody);
 
     res.status(200).json({
       success: true,
-      message: "Banner create successfully ^-^ ",
+      message: "Banner create successfully..!",
       data: banner,
     });
   } catch (error) {
     res.status(error?.statusCode || 400).json({
       success: false,
       message:
-        error?.message || "Something went wrong, please try again or later -!- ",
+        error?.message || "Something went wrong..! ",
     });
   }
 };
@@ -35,14 +34,14 @@ const getBannerList = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Banner list dispatch successfully ^-^ ",
+      message: "Banner list dispatch successfully..!",
       data: bannerList,
     });
   } catch (error) {
     res.status(error?.statusCode || 400).json({
       success: false,
       message:
-        error?.message || "Something went wrong, please try again or later -!- ",
+        error?.message || "Something went wrong..! ",
     });
   }
 };

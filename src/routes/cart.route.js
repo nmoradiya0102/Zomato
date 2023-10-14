@@ -5,27 +5,27 @@ const { cartController } = require("../controllers");
 
 const router = express.Router();
 
-/* ------------------------------- create cart ------------------------------ */
+/*- create cart */
 router.post(
     "/create-cart",
     validate(cartValidation.createCart),
     cartController.createCart
 )
 
-/* ------------------------------ get cart list ----------------------------- */
+/* get cart list */
 router.get(
     "/list",
     cartController.getCartList
 )
 
-/* ------------------------------- update cart ------------------------------ */
+/*- update cart */
 router.put(
     "/update-cart/:cartId",
     validate(cartValidation.createCart),
     cartController.updateCart
 )
 
-/* ------------------------------- delete cart ------------------------------ */
+/*- delete cart */
 router.delete(
     "/delete-cart/:cartId",
     cartController.deleteCart

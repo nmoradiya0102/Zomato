@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
- /* ------------------------------- create user ------------------------------ */
+ /* create user */
 const createUser = {
   body: Joi.object().keys({
     first_name : Joi.string().required().trim(),
@@ -11,7 +11,7 @@ const createUser = {
   }),
 };
 
-/* -------------------------------- Send mail ------------------------------- */
+/* Send mail */
 const sendMail = {
     body: Joi.object({
       email : Joi.string().required().trim().email(),

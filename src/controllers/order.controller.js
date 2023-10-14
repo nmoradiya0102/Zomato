@@ -1,6 +1,6 @@
 const { orderService } = require("../services");
 
-/* ------------------------------ Create order ------------------------------ */
+/* Create order */
 const createOrder = async (req, res) => {
   try {
     const reqbody = req.body;
@@ -25,27 +25,7 @@ const createOrder = async (req, res) => {
   }
 };
 
-/* ---------------------------  get order by id -------------------------- */
-const getOrderList = async (req, res) => {
-  try {
-    const orderList = await orderService.getOrderList();
-    if (!orderList) {
-      throw new Error("Order list not found..!");
-    }
-    res.status(200).json({
-      success: true,
-      message: "Order list dispatch successfully..!",
-      data: orderList,
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
-
-/* ------------------------------ update order ------------------------------ */
+/* update order */
 const updateOrder = async (req, res) => {
   try {
     const orderExist = await orderService.getOrderById(req.params.orderId);
@@ -72,7 +52,7 @@ const updateOrder = async (req, res) => {
   }
 };
 
-/* -----------------------------  delete order ---------------------------- */
+/*  delete order  */
 const deleteOrder = async (req, res) => {
   try {
     const orderExist = await orderService.getOrderById(req.params.orderId);

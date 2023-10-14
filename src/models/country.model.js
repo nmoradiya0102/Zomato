@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
- /* ----------------------------- Country schema ----------------------------- */
+ /* Country schema */
 const countrySchema = new mongoose.Schema(
     {
         country_name: {

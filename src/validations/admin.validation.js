@@ -13,7 +13,7 @@ const createAdmin = {
                             })).required()})
   };
 
-// Exporting validations object
+
 module.exports = {
     createAdmin
 }

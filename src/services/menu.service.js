@@ -1,26 +1,26 @@
 const { Menu } = require("../models");
 
-//create Menu
+/* create Menu */
 const createMenu = async (reqBody) => {
     return Menu.create(reqBody)
 };
 
-//Menu list
+/* Menu list */
 const getMenuList = async (req, res) => {
     return Menu.find().populate("Food").populate("Restaurant").populate("RestaurantType")
 };
 
-//upadte Menu
+/* upadte Menu */
 const updateMenu = async (menuId, updateBody) => {
     return Menu.findByIdAndUpdate(menuId, { $set: updateBody })
 };
 
-//delete Menu
+/* delete Menu */
 const deleteMenu = async (menuId) => {
     return Menu.findByIdAndDelete(menuId)
 };
 
-//find  Menu
+/* find  Menu */
 const findMenuByName = async (menu_name) => {
     return Menu.findOne({ menu_name });
 }

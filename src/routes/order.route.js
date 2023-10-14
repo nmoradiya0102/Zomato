@@ -4,27 +4,27 @@ const { orderValidation } = require("../validations");
 const { orderController } = require("../controllers");
 const router = express.Router();
 
-/* ------------------------------ create order ------------------------------ */
+/* create order */
 router.post(
     "/create-order",
     validate(orderValidation.createOrder),
     orderController.createOrder
 )
 
-/* ----------------------------- get order li9st ---------------------------- */
+/*  get order li9st */
 router.get(
     "/list",
     orderController.getOrderList
 )
 
-/* ------------------------------ update order ------------------------------ */
+/* update order */
 router.put(
     "/update-order/:orderId",
     validate(orderValidation.createOrder),
     orderController.updateOrder
 )
 
-/* ------------------------------ delete order ------------------------------ */
+/* delete order */
 router.delete(
     "/delete-order/:orderId",
     orderController.deleteOrder

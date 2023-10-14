@@ -13,3 +13,4 @@ module.exports.adminValidation = require("./admin.validation");
 module.exports.favoriteValidation = require("./favorite.validation");
 module.exports.menuValidation = require("./menu.validation");
 module.exports.reviewValidation = require("./review.validation");
+module.exports.ownerValidation = require("./owner.validation");

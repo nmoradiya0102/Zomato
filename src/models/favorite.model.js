@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/**favorite schema */
+/* favorite schema */
 const favoriteSchema = new mongoose.Schema(
     {
         user_id: {

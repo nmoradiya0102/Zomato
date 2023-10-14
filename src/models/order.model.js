@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/* ------------------------------ order schema ------------------------------ */
+/* order schema */
 const orderSchema = new mongoose.Schema(
     {
         name: {

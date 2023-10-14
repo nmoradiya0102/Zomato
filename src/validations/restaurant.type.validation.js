@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/* ------------------------- create restaurant type ------------------------- */
+/* create restaurant type */
 const createRestaurantType = {
   body: Joi.object().keys({
     restaurant_type : Joi.string().required().trim(),

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+/* token schema */
 const tokenSchema = mongoose.Schema(
   {
     token: {

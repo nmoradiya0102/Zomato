@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
- /* ------------------------------ state schema ------------------------------ */
+ /* state schema */
 const stateSchema = new mongoose.Schema(
     {
         state_name: {

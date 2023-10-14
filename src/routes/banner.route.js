@@ -1,22 +1,20 @@
 const express = require("express");
-const auth = require("../middlewares/auth");
-// const { upload } = require("../middlewares/upload");
+const { upload } = require("../middlewares/upload");
 const validate = require("../middlewares/validate");
 const { bannerValidation } = require("../validations");
 const { bannerController } = require("../controllers");
 
 const router = express.Router();
 
-/** Create product */
+/* Create banner */
 router.post(
   "/create",
-  auth(),
-//   upload.single("productimage"),
+  upload.single("banner_image"),
   validate(bannerValidation.createBanner),
   bannerController.createBanner
 );
 
-/** Get production list */
+/* Get banner list */
 router.get(
   "/list",
   validate(bannerValidation.getList),

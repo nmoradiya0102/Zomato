@@ -8,7 +8,7 @@ const createBanner = async (reqBody) => {
 
 /** Get Banner list */
 const getBannerList = async () => {
-  return Banner.find().populate("product")
+  return Banner.find().populate("Food")
 };
 
 

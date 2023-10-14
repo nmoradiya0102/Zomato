@@ -13,3 +13,4 @@ module.exports.adminController = require("./admin.controller");
 module.exports.favoriteController = require("./favorite.controller");
 module.exports.menuController = require("./menu.controller");
 module.exports.reviewController = require("./review.controller");
+module.exports.ownerController = require("./owner.controller");

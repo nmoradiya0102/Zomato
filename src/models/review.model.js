@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/**review schema */
+/* review schema */
 const reviewSchema = new mongoose.Schema(
     {
         user_id: {

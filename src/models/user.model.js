@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-/* ------------------------------- user schema ------------------------------ */
+/*  user schema */
 const userSchema = new mongoose.Schema(
     {
       first_name: {

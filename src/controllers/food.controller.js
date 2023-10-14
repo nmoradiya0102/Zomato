@@ -1,6 +1,6 @@
 const { foodService } = require("../services");
 
- /* ------------------------------- Create food ------------------------------ */
+ /* Create food */
 const createFood = async(req,res) => {
     try {
         const reqbody = req.body;
@@ -21,7 +21,7 @@ const createFood = async(req,res) => {
     }
 }
 
-/* ------------------------------ Get food list ----------------------------- */
+/* Get food list */
 const getFoodList = async(req,res) => {
     try {
         const foodList = await foodService.getFoodList();
@@ -41,7 +41,7 @@ const getFoodList = async(req,res) => {
       }
 }
 
- /* ------------------------------- Update food ------------------------------ */
+ /* Update food */
 const updateFood = async(req,res) => {
     try {
         const foodId = req.params.foodId;
@@ -66,7 +66,7 @@ const updateFood = async(req,res) => {
         })
     }
 }
- /* ------------------------------- Delete food ------------------------------ */
+ /* Delete food */
 const deleteFood = async(req,res) => {
     try {
         const foodId = req.params.foodId;

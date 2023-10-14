@@ -24,18 +24,6 @@ const adminSchema = new mongoose.Schema(
                         ref : "Restaurant"
                     }
                 },
-                {
-                    restaurant_name : {
-                        type : mongoose.Types.ObjectId,
-                        ref : "Restaurant"
-                    }
-                },
-                {
-                    restaurant_name : {
-                        type : mongoose.Types.ObjectId,
-                        ref : "Restaurant"
-                    }
-                },
         ],
         verified : {
             type : Boolean,
