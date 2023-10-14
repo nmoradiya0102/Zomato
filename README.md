@@ -8,9 +8,9 @@ Welcome to our Food Delivery App built with Node.js! This README file will walk 
 3. **Installation** ⚙️
 4. **Usage** 🍽️
 5. **Features** 📦
-6. **Troubleshooting** 🛠️
-7. **Contributing** 🤝
-8. **Support and Feedback** 📞📧
+6. **Dependencies** 📦
+7. **License** 📄
+8. **Contributing** 🤝
 
 ## 1. Introduction 🌟
 Our Food Delivery App is designed to connect you with a variety of restaurants, explore menus, customize orders, and enjoy quick and convenient delivery services. We aim to make your food ordering experience both enjoyable and hassle-free.
