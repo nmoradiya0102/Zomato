@@ -1,4 +1,4 @@
-# Food Delivery App Readme 🍔🚚
+# Food Delivery App🍔🚚
 
 Welcome to our Food Delivery App built with Node.js! This README file will walk you through the installation, setup, and usage of our application, ensuring you have a seamless experience while exploring and ordering your favorite dishes.
 
