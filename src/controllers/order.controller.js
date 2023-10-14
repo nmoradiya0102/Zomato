@@ -25,6 +25,25 @@ const createOrder = async (req, res) => {
   }
 };
 
+/* gey order list */
+const getOrderList = async(req,res) => {
+  try {
+      const orderList = await orderService.getOrderList();
+      if(!orderList){
+          throw new Error("Order list does not exist..");
+      }
+      res.status(200).json({
+          success:true,
+          message:"Order list dispatch successfully.. ",
+          data:orderList
+      });
+  } catch (error) {
+      res.status(400).json({
+          success:false,
+          message: error.message,
+      });
+  }
+}
 /* update order */
 const updateOrder = async (req, res) => {
   try {
