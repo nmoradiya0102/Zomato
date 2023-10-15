@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 // owner model schema defiend
-const OwnerSchema = new mongoose.Schema(
+const ownerSchema = new mongoose.Schema(
     {
         owner_name: {
             type: String,
@@ -30,5 +30,5 @@ const OwnerSchema = new mongoose.Schema(
 );
 
 
-const owner = mongoose.model("Owner", OwnerSchema);
+const owner = mongoose.model("Owner", ownerSchema);
 module.exports = owner;
